@@ -5,8 +5,8 @@ const FullWidthVideo = () => {
   const [playing, setPlaying] = useState(false);
   const [error, setError] = useState(false);
 
-  // Video URL and fallback
-  const videoUrl = "https://www.youtube.com/watch?v=D6xzc6dvTGo"; // Original URL
+  // Updated Video URL
+  const videoUrl = "https://youtu.be/z-fnd8OReuQ?si=fb6iH2sZ2CSntyRv"; // New URL
   const fallbackUrl = "https://www.youtube.com/watch?v=ysz5S6PUM-U"; // Embeddable fallback video
 
   return (
@@ -27,7 +27,7 @@ const FullWidthVideo = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundImage: `url('https://img.youtube.com/vi/D6xzc6dvTGo/maxresdefault.jpg')`,
+            backgroundImage: `url('https://img.youtube.com/vi/z-fnd8OReuQ/maxresdefault.jpg')`, // Updated Thumbnail URL
             backgroundSize: "cover",
             backgroundPosition: "center",
             display: "flex",

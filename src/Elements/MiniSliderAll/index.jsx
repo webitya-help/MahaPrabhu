@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
-const MiniSliderAll = ({ santList, title, viewAllLink,seconds }) => {
+const MiniSliderAll = ({ santList, title, viewAllLink, seconds }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -41,9 +41,9 @@ const MiniSliderAll = ({ santList, title, viewAllLink,seconds }) => {
       }
     };
 
-    const timer = setTimeout(handleTransitionEnd, {seconds}); // Match transition duration
+    const timer = setTimeout(handleTransitionEnd, seconds); // Match transition duration
     return () => clearTimeout(timer);
-  }, [scrollPosition, santList.length, extendedList.length]);
+  }, [scrollPosition, santList.length, extendedList.length, seconds]);
 
   return (
     <div
@@ -67,18 +67,18 @@ const MiniSliderAll = ({ santList, title, viewAllLink,seconds }) => {
             isTransitioning ? "transition-transform duration-300" : ""
           }`}
           style={{
-            transform: `translateX(-${scrollPosition * 150}px)`, // 150px is the item width
+            transform: `translateX(-${scrollPosition * 200}px)`, // 200px is the new item width
           }}
         >
           {extendedList.map((sant, index) => (
             <div
               key={index}
-              className="min-w-[150px] max-w-[150px] flex flex-col items-center mx-2"
+              className="min-w-[200px] max-w-[200px] flex flex-col items-center mx-2"
             >
               <img
                 src={sant.image}
                 alt={sant.title}
-                className="w-28 h-28 object-cover rounded-lg shadow-md"
+                className="w-44 h-44 object-cover rounded-lg shadow-md"
               />
               <p className="text-center text-sm text-gray-700 mt-2">
                 {sant.title}

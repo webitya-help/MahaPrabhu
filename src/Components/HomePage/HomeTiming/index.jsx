@@ -40,7 +40,7 @@ const HomeTimingSection = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const isSmallDevice = windowWidth < 576;
-  const itemsPerSlide = isSmallDevice ? 1 : 2;
+  const itemsPerSlide = isSmallDevice ? 1 : 4; // Show 4 items per slide on larger screens
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -49,13 +49,14 @@ const HomeTimingSection = () => {
   }, []);
 
   const timingEvents = [
-    { title: "Mangla Aarti", description: "5:30 AM", icon: <ClockCircleOutlined /> },
-    { title: "Dhoop Aarti", description: "9:00 AM", icon: <CalendarOutlined /> },
-    { title: "Sringar Aarti", description: "10:00 AM", icon: <ClockCircleOutlined /> },
-    { title: "Rajbhog Aarti", description: "12:00 PM", icon: <BellOutlined /> },
-    { title: "Uthapan Aarti", description: "5:30 PM", icon: <BellOutlined /> },
-    { title: "Sandhya Aarti", description: "6:30 PM", icon: <BellOutlined /> },
-    { title: "Sayan Aarti", description: "8:30 PM", icon: <BellOutlined /> },
+    { title: "मंगला आरती ", description: "5:30 AM", icon: <ClockCircleOutlined /> },
+    { title: "धूप आरती ", description: "9:00 AM", icon: <CalendarOutlined /> },
+    { title: "श्रृंगार आरती ", description: "10:00 AM", icon: <ClockCircleOutlined /> },
+    { title: "राजभोग आरती", description: "12:00 PM", icon: <BellOutlined /> },
+    { title: "उत्थापन आरती ", description: "5:30 PM", icon: <BellOutlined /> },
+    { title: "संध्या आरती", description: "6:30 PM", icon: <BellOutlined /> },
+    { title: "सयन आरती ", description: "8:30 PM", icon: <BellOutlined /> },
+  
   ];
 
   const slides = [];
@@ -64,8 +65,8 @@ const HomeTimingSection = () => {
   }
 
   return (
-    <div className="container mx-auto px-6 pt-6 pb-4  bg-gray-50">
-      <div className="flex justify-between items-center ">
+    <div className="container mx-auto px-6 pt-6 pb-4 bg-gray-50">
+      <div className="flex justify-between items-center">
         <h1 className="text-xl md:text-2xl font-bold text-gray-800">अष्ट्यम सेवा </h1>
         <Button
           className="px-4 py-1 text-sm font-medium bg-gray-800 text-white rounded"
@@ -88,11 +89,11 @@ const HomeTimingSection = () => {
           <div key={index}>
             <Row gutter={[16, 24]} justify="center">
               {slide.map((event, eventIndex) => (
-                <Col xs={24} md={12} key={eventIndex}>
+                <Col xs={24} sm={12} md={6} lg={6} xl={6} key={eventIndex}> {/* 4 cards per row */}
                   <Card className="flex flex-col h-full shadow-sm">
-                    <div className="text-gray-600 text-4xl mb-3 flex justify-center">
+                    {/* <div className="text-gray-600 text-4xl mb-3 flex justify-center">
                       {event.icon}
-                    </div>
+                    </div> */}
                     <h2 className="text-center text-lg font-medium text-gray-800 mb-1">
                       {event.title}
                     </h2>

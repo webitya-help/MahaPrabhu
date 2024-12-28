@@ -8,7 +8,8 @@ function DesktopNav() {
         <a
           key={link.name}
           href={link.href}
-          className="text-white hover:text-gray-600 px-3 py-2 text-md font-medium transition-colors duration-200"
+          className="text-white hover:text-gray-600 px-3 font-semibold py-2 text-md transition-colors duration-200" 
+          style={{fontSize:"17px"}}
         >
           {link.name}
         </a>

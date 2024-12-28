@@ -6,7 +6,7 @@ const SampradayHeroBanner = () => {
       style={{
         position: 'relative',
         width: '100%',
-        height: '30vh',
+        height: '40vh',
         backgroundImage: 'url("/Carousel/1.jpg")', // Image in the public folder
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -15,23 +15,27 @@ const SampradayHeroBanner = () => {
         alignItems: 'center',
         textAlign: 'center',
         color: '#fff',
-        marginTop:"70px"
+        marginTop: '70px',
+        borderRadius: '8px',
+        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
       }}
     >
       <div
         style={{
-          padding: '20px',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background for text readability
-          borderRadius: '10px',
+          backgroundColor: 'rgba(0, 0, 0, 0.4)', // Slightly transparent for a soft look
+          padding: '20px 40px',
+          borderRadius: '12px',
+          maxWidth: '80%',
         }}
       >
         <h1
           style={{
-            fontSize: '36px',
-            fontWeight: 'bold',
-            marginBottom: '10px',
-            letterSpacing: '2px',
+            fontSize: '40px',
+            fontWeight: '500',
+            letterSpacing: '1.5px',
             textTransform: 'uppercase',
+            lineHeight: '1.3',
+            fontFamily: "'Roboto', sans-serif",
           }}
         >
           राधावल्लभ संप्रदाय

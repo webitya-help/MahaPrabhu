@@ -3,70 +3,72 @@ import { FacebookOutlined, InstagramOutlined, WhatsAppOutlined, YoutubeOutlined 
 
 const FooterEl = () => {
   return (
-    <footer className="bg-gray-100 text-gray-700 py-8 px-4">
-      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-        {/* Left Section: Social Media and Address */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
-          <div className="flex space-x-4 text-2xl text-gray-600">
-            <a
-              href="#"
-              aria-label="Instagram"
-              title="Follow us on Instagram"
-              className="hover:text-pink-500 transition"
-            >
-              <InstagramOutlined />
-            </a>
-            <a
-              href="#"
-              aria-label="Facebook"
-              title="Like us on Facebook"
-              className="hover:text-blue-600 transition"
-            >
-              <FacebookOutlined />
-            </a>
-            <a
-              href="#"
-              aria-label="YouTube"
-              title="Subscribe to our YouTube channel"
-              className="hover:text-red-600 transition"
-            >
-              <YoutubeOutlined />
-            </a>
-            <a
-              href="#"
-              aria-label="WhatsApp"
-              title="Chat with us on WhatsApp"
-              className="hover:text-green-500 transition"
-            >
-              <WhatsAppOutlined />
-            </a>
-          </div>
-          <p className="text-sm">
-            Ganga Harmu Ranchi, Near Naman Vidya School, Ranchi
+    <footer className="bg-gray-100 text-gray-700 py-8 px-6">
+      <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between gap-y-6 gap-x-10">
+        {/* Left Column: Address */}
+        <div className="flex-1 min-w-[200px] text-center md:text-left">
+          <p className="text-sm font-medium leading-relaxed">
+            गोo श्रीहित निमिष जी महाराज,<br />
+            श्रीहित राधावल्लभ लाल मंदिर, वृंदावन
           </p>
         </div>
 
-        {/* Center Section: Logo */}
-        <div className="flex-shrink-0">
-          <img src="/logo.png" alt="Kanchan Stationery Logo" className="w-36 bg-black rounded-lg" />
+        {/* Middle Column: Social Media Links */}
+        <div className="flex-1 flex justify-center space-x-6 text-2xl text-gray-600 min-w-[200px]">
+          <a
+            href="https://www.instagram.com/shrihitradhavallabhlal/profilecard/?igsh=MW15N252NW80Zm5tYw=="
+            aria-label="Instagram"
+            title="Follow us on Instagram"
+            className="hover:text-pink-500 transition transform hover:scale-110"
+          >
+            <InstagramOutlined />
+          </a>
+          <a
+            href="https://www.facebook.com/share/kqsnsRNxBETYHXkM/?mibextid=wwXIfr"
+            aria-label="Facebook"
+            title="Like us on Facebook"
+            className="hover:text-blue-600 transition transform hover:scale-110"
+          >
+            <FacebookOutlined />
+          </a>
+          <a
+            href="https://youtube.com/@shrihitradhavallabhlal?si=T6eS2SPCQN7WkR-s"
+            aria-label="YouTube"
+            title="Subscribe to our YouTube channel"
+            className="hover:text-red-600 transition transform hover:scale-110"
+          >
+            <YoutubeOutlined />
+          </a>
+          <a
+            href="https://wa.link/woao1u"
+            aria-label="WhatsApp"
+            title="Chat with us on WhatsApp"
+            className="hover:text-green-500 transition transform hover:scale-110"
+          >
+            <WhatsAppOutlined />
+          </a>
         </div>
 
-        {/* Right Section: WhatsApp Inquiry */}
-        <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-4">
-          <p className="text-sm">
+        {/* Right Column: WhatsApp Inquiry */}
+        <div className="flex-1 min-w-[200px] text-center md:text-right">
+          <p className="text-sm font-medium mb-3">
             Connect on WhatsApp for any inquiry or services
           </p>
           <a
-            href="#"
-            className="flex items-center justify-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-full text-sm shadow-lg hover:bg-green-600 transition-transform transform hover:scale-105"
+            href="https://wa.link/woao1u"
+            className="inline-flex items-center justify-center space-x-2 bg-green-500 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-lg hover:bg-green-600 transition transform hover:scale-105"
           >
             <WhatsAppOutlined />
             <span>Enquiry Now</span>
           </a>
         </div>
       </div>
-      <div className="text-center text-xs text-gray-500 mt-6">
-        © {new Date().getFullYear()} shriradhavallabhlal.com. All rights reserved.
+
+      {/* Footer Bottom Section */}
+      <div className="border-t border-gray-300 mt-6 pt-4">
+        <div className="text-center text-xs text-gray-500">
+          © {new Date().getFullYear()} <a href="/" className="hover:underline">shriradhavallabhlal.com</a>. All rights reserved.
+        </div>
       </div>
     </footer>
   );

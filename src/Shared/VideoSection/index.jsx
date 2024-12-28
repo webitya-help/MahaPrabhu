@@ -6,18 +6,18 @@ const VideoSection = () => {
   const videos = [
     {
       url: "https://youtu.be/rgYrInORVu8?si=7-4WzUGAukge7PGH",
-      title: "Video 1",
-      description: "Brief description of video one content.",
+      title: "॥ शरद पूर्णिमा उत्सव ॥ श्री हित राधावल्लभ लाल ॥",
+      description: "शरद पूर्णिमा उत्सव श्री हित राधावल्लभ लाल ॥",
     },
     {
       url: "https://youtu.be/OdSNTgOn9Dc?si=3qpeYj04AR3c-bD1",
-      title: "Video 2",
-      description: "Brief description of video two content.",
+      title: "व्याहुला दर्शन - श्री हित राधावल्लभ लाल वृंदावन धाम",
+      description: "व्याहुला दर्शन - श्री हित राधावल्लभ लाल वृंदावन धाम",
     },
     {
       url: "https://youtu.be/z-fnd8OReuQ?si=lfdMXh1UUntRLcW4",
-      title: "Video 3",
-      description: "Brief description of video three content.",
+      title: "राधा प्यारी ने जन्म लिया है - राधाष्टमी विशेष उत्सव श्री राधावल्लभ लाल",
+      description: "राधा प्यारी ने जन्म लिया है - राधाष्टमी विशेष उत्सव श्री राधावल्लभ लाल",
     },
   ];
 
@@ -71,11 +71,23 @@ const VideoSection = () => {
                   fontWeight: "500",
                   color: "#333",
                   margin: "1rem 0 0.5rem",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
               >
                 {video.title}
               </h3>
-              <p style={{ fontSize: "14px", color: "#666", margin: "0" }}>
+              <p
+                style={{
+                  fontSize: "14px",
+                  color: "#666",
+                  margin: "0",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
                 {video.description}
               </p>
             </Card>
