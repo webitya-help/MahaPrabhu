@@ -3,14 +3,17 @@ import { FacebookOutlined, InstagramOutlined, WhatsAppOutlined, YoutubeOutlined 
 
 const FooterEl = () => {
   return (
-    <footer className="bg-gray-100 text-gray-700 py-8 px-6">
+    <footer className="bg-gray-100 text-gray-700 py-8 px-6 select-none">
       <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between gap-y-6 gap-x-10">
         {/* Left Column: Address */}
         <div className="flex-1 min-w-[200px] text-center md:text-left">
           <p className="text-sm font-medium leading-relaxed">
-            गोo श्रीहित निमिष जी महाराज,<br />
-            श्रीहित राधावल्लभ लाल मंदिर, वृंदावन
+            <b> गोo श्रीहित निमिष जी महाराज</b>,<br />
+            <b>श्रीहित राधावल्लभ लाल मंदिर, वृंदावन</b>
+            <p><b>संपर्क सूत्र :</b> 8168100515 , 9890455777
+            </p>
           </p>
+          
         </div>
 
         {/* Middle Column: Social Media Links */}
@@ -59,7 +62,8 @@ const FooterEl = () => {
             className="inline-flex items-center justify-center space-x-2 bg-green-500 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-lg hover:bg-green-600 transition transform hover:scale-105"
           >
             <WhatsAppOutlined />
-            <span>Enquiry Now</span>
+            <span>मंदिर से जुड़े
+            </span>
           </a>
         </div>
       </div>

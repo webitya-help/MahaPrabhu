@@ -14,11 +14,11 @@ const Carousel = ({ autoplay = true, interval = 5000 }) => {
       title: ""
     },
     {
-      image: "/Carousel/3.jpg",
+      image: "/Carousel/14.jpg",
       title: ""
     },
     {
-      image: "/Carousel/4.jpg",
+      image: "/Carousel/11.jpg",
       title: ""
     },
     {

@@ -5,52 +5,40 @@ import MiniSliderAll from "../MiniSliderAll";
 const VaniSlider = () => {
   const santData = [
     {
-      image: "/Carousel/1.jpg",
+      image: "/hit sahitya 512 by 512/1.png",
       title: "श्री हित हरिवंश",
     },
     {
-      image: "/Carousel/2.jpg",
+      image: "/hit sahitya 512 by 512/2.png",
       title: "श्री हरिराम व्यास",
     },
     {
-      image: "/Carousel/3.jpg",
+      image: "/hit sahitya 512 by 512/3.png",
       title: "स्वामी श्री हरिदास",
     },
     {
-      image: "/Carousel/4.jpg",
+      image: "/hit sahitya 512 by 512/4.png",
       title: "श्री हित ध्रुवदास",
     },
     {
-      image: "/Carousel/5.jpg",
+      image: "/hit sahitya 512 by 512/5.png",
       title: "महाप्रभु वल्लभाचार्य",
     },
     {
-      image: "/Carousel/6.jpg",
+      image: "/hit sahitya 512 by 512/6.png",
       title: "श्री विठ्ठल देव",
     },
     {
-      image: "/Carousel/2.jpg",
+      image: "/hit sahitya 512 by 512/7.png",
       title: "श्री विष्णु देव जी",
     },
     {
-      image: "/Carousel/3.jpg",
+      image: "/hit sahitya 512 by 512/8.png",
       title: "स्वामी श्री हरिदास",
     },
     {
-      image: "/Carousel/4.jpg",
+      image: "/hit sahitya 512 by 512/9.png",
       title: "श्री हित ध्रुवदास",
-    },
-    {
-      image: "/Carousel/5.jpg",
-      title: "महाप्रभु वल्लभाचार्य",
-    },
-    {
-      image: "/Carousel/6.jpg",
-      title: "श्री विठ्ठल देव",
-    },
-    {
-      image: "/Carousel/2.jpg",
-      title: "श्री विष्णु देव जी",
     },
   ];
 
@@ -58,8 +46,8 @@ const VaniSlider = () => {
     <div className="container mx-auto">
       <MiniSliderAll
         santList={santData}
-        title="रसिक संत"
-        viewAllLink="/view-all-sants" 
+        title="श्रीहित रसोपासना एवं संतों की वाणी"
+        viewAllLink="/hit-sahitya" 
         seconds={1500}
       />
     </div>

@@ -5,61 +5,57 @@ import MiniSliderAll from "../MiniSliderAll";
 const UtsavSlider = () => {
   const santData = [
     {
-      image: "/Carousel/1.jpg",
-      title: "श्री हित हरिवंश",
+      image: "/utsav 512 by 512/ankut utsav.png",
+      title: "अन्नकूट दर्शन  ",
     },
     {
-      image: "/Carousel/2.jpg",
-      title: "श्री हरिराम व्यास",
+      image: "/utsav 512 by 512/chandnoutsav.png",
+      title: " चंदन उत्सव ",
     },
     {
-      image: "/Carousel/3.jpg",
-      title: "स्वामी श्री हरिदास",
+      image: "/utsav 512 by 512/diwali utsav.png",
+      title: " दिवाली उत्सव ",
     },
     {
-      image: "/Carousel/4.jpg",
-      title: "श्री हित ध्रुवदास",
+      image: "/utsav 512 by 512/gulab dol.png",
+      title: " गुलाब डोल उत्सव ",
     },
     {
-      image: "/Carousel/5.jpg",
-      title: "महाप्रभु वल्लभाचार्य",
+      image: "/utsav 512 by 512/holi utsav.png",
+      title: "होली उत्सव ",
     },
     {
-      image: "/Carousel/6.jpg",
-      title: "श्री विठ्ठल देव",
+      image: "/utsav 512 by 512/khichdi utsav.png",
+      title: "खिचड़ी उत्सव ",
     },
     {
-      image: "/Carousel/2.jpg",
-      title: "श्री विष्णु देव जी",
+      image: "/utsav 512 by 512/moor kunj.png",
+      title: "मोर कुंज",
     },
     {
-      image: "/Carousel/3.jpg",
-      title: "स्वामी श्री हरिदास",
+      image: "/utsav 512 by 512/phul bangla.png",
+      title: "फूल बंगला",
     },
     {
-      image: "/Carousel/4.jpg",
-      title: "श्री हित ध्रुवदास",
+      image: "/utsav 512 by 512/radha ashtami.png",
+      title: "श्री राधाष्टमी",
     },
     {
-      image: "/Carousel/5.jpg",
-      title: "महाप्रभु वल्लभाचार्य",
+      image: "/utsav 512 by 512/sharad purnima.png",
+      title: "शरद पूर्णिमा",
     },
     {
-      image: "/Carousel/6.jpg",
-      title: "श्री विठ्ठल देव",
-    },
-    {
-      image: "/Carousel/2.jpg",
-      title: "श्री विष्णु देव जी",
-    },
-  ];
+      image: "/utsav 512 by 512/vyahula.png",
+      title: "व्याहुला महोत्सव",
+},
+];
 
   return (
     <div className="container mx-auto">
       <MiniSliderAll
         santList={santData}
-        title="रसिक संत"
-        viewAllLink="/view-all-sants" 
+        title="श्रीहित राधावल्लभ संप्रदाय उत्सव"
+        viewAllLink="/utsav-pad" 
         seconds={1300}
       />
     </div>

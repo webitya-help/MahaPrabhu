@@ -4,6 +4,8 @@ import SampradayHeroBanner from "../../Components/HitSampraday/SampradayHero";
 import SampradayTempleSection from "../../Components/HitSampraday/SampradayTempleSection";
 import VyasMishraSection from "../../Components/HitSampraday/VyasMishraSection";
 import LayoutEl from "../../Shared/LayoutEl";
+import SantSliderAbout from "../../Components/HitSampraday/SantSlider";
+import BottomSectionAbout from "../../Components/HitSampraday/BottomSectionAbout";
 
 const RadhaValabhSampraday = () => {
   return (
@@ -45,7 +47,13 @@ const RadhaValabhSampraday = () => {
       <LayoutEl>
         <SampradayHeroBanner />
         <SampradayTempleSection />
-        <VyasMishraSection />
+        <div className="pl-10 text-3xl">
+        <h1> राधावल्लभ संप्रदाय के अन्य मुख्य मंदिरों की दर्शन
+        </h1>
+        </div>
+        <SantSliderAbout/>
+        <BottomSectionAbout/>
+        {/* <VyasMishraSection /> */}
       </LayoutEl>
     </>
   );

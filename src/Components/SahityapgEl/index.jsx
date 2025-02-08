@@ -2,16 +2,16 @@
 import React from 'react';
 
 const cardsData = [
-    { id: 1, title: "Yamunashtak", imageUrl: "/HitSahityaCoverImg/1.jpg", pdfUrl: "/HitSahityPdf/Yamunashtak.pdf" },
-    { id: 2, title: "Hit Chaurasi ji", imageUrl: "/HitSahityaCoverImg/2.jpg", pdfUrl: "/HitSahityPdf/Hit Chaurasi ji.pdf" },
-    { id: 3, title: "Sfut Vani", imageUrl: "/HitSahityaCoverImg/3.jpg", pdfUrl: "/HitSahityPdf/Sfut Vani.pdf" },
-    { id: 4, title: "Vrindavan dham ko mandal", imageUrl: "/HitSahityaCoverImg/4.jpg", pdfUrl: "/HitSahityPdf/Vrindavan dham ko mandal.pdf" },
-    { id: 5, title: "Karuna Beli", imageUrl: "/HitSahityaCoverImg/5.jpg", pdfUrl: "/HitSahityPdf/Karuna Beli.pdf" },
-    { id: 6, title: "Vrindavan Satlila", imageUrl: "/HitSahityaCoverImg/6.jpg", pdfUrl: "/HitSahityPdf/Vrindavan Satlila.pdf" },
-    { id: 7, title: "Sewak Vani", imageUrl: "/HitSahityaCoverImg/7.jpg", pdfUrl: "/HitSahityPdf/Sewak Vani.pdf" },
-    { id: 8, title: "Shrihit Mangal Gaan", imageUrl: "/HitSahityaCoverImg/8.jpg", pdfUrl: "/HitSahityPdf/Shrihit Mangal Gaan.pdf" },
-    { id: 9, title: "Ashtyam Padawali", imageUrl: "/HitSahityaCoverImg/9.jpg", pdfUrl: "/HitSahityPdf/ashtyam padawali.pdf" },
-    { id: 10, title: "Utsav Patrika", imageUrl: "/HitSahityaCoverImg/10.jpg", pdfUrl: "/HitSahityPdf/Utsav Patrika.pdf" },
+    { id: 1, title: "यमुनाष्टक ", imageUrl: "/HitSahityaCoverImg/1.jpg", pdfUrl: "/HitSahityPdf/Yamunashtak.pdf" },
+    { id: 2, title: "श्रीहित चौरासी जी ", imageUrl: "/HitSahityaCoverImg/2.jpg", pdfUrl: "/HitSahityPdf/Hit Chaurasi ji.pdf" },
+    { id: 3, title: "स्टफ वाणी ", imageUrl: "/HitSahityaCoverImg/3.jpg", pdfUrl: "/HitSahityPdf/Sfut Vani.pdf" },
+    { id: 4, title: "वृंदावन धाम को मंडल", imageUrl: "/HitSahityaCoverImg/4.jpg", pdfUrl: "/HitSahityPdf/Vrindavan dham ko mandal.pdf" },
+    { id: 5, title: "करुणा बेली ", imageUrl: "/HitSahityaCoverImg/5.jpg", pdfUrl: "/HitSahityPdf/Karuna Beli.pdf" },
+    { id: 6, title: "वृंदावन शतलीला ", imageUrl: "/HitSahityaCoverImg/6.jpg", pdfUrl: "/HitSahityPdf/Vrindavan Satlila.pdf" },
+    { id: 7, title: "सेवक वाणी ", imageUrl: "/HitSahityaCoverImg/7.jpg", pdfUrl: "/HitSahityPdf/Sewak Vani.pdf" },
+    { id: 8, title: "श्रीहित मंगल गान", imageUrl: "/HitSahityaCoverImg/8.jpg", pdfUrl: "/HitSahityPdf/Shrihit Mangal Gaan.pdf" },
+    { id: 9, title: "अष्ट्यम पासवाली ", imageUrl: "/HitSahityaCoverImg/9.jpg", pdfUrl: "/HitSahityPdf/ashtyam padawali.pdf" },
+    { id: 10, title: "उत्सव पत्रिका", imageUrl: "/HitSahityaCoverImg/10.jpg", pdfUrl: "/HitSahityPdf/Utsav Patrika.pdf" },
   ];
 
 const CardsComponent = () => {

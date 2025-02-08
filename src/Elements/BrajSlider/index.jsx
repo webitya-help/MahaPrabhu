@@ -5,61 +5,52 @@ import MiniSliderAll from "../MiniSliderAll";
 const BrajSlider = () => {
   const santData = [
     {
-      image: "/Carousel/1.jpg",
-      title: "श्री हित हरिवंश",
+      image: "/braj darshan 512 by 512/barsana.png",
+      title: "श्रीधाम बरसाना",
     },
     {
-      image: "/Carousel/2.jpg",
-      title: "श्री हरिराम व्यास",
+      image: "/braj darshan 512 by 512/dwarikadish.png",
+      title: "श्री द्वारिकाधीश जी",
     },
     {
-      image: "/Carousel/3.jpg",
-      title: "स्वामी श्री हरिदास",
+      image: "/braj darshan 512 by 512/govardhan.png",
+      title: "श्री गोवर्धन जी",
     },
     {
-      image: "/Carousel/4.jpg",
-      title: "श्री हित ध्रुवदास",
+      image: "/braj darshan 512 by 512/janam bhumi.png",
+      title: "श्रीकृष्ण जन्मभूमि",
     },
     {
-      image: "/Carousel/5.jpg",
-      title: "महाप्रभु वल्लभाचार्य",
+      image: "/braj darshan 512 by 512/maan sarovar.png",
+      title: "मानसरोवर धाम",
     },
     {
-      image: "/Carousel/6.jpg",
-      title: "श्री विठ्ठल देव",
+      image: "/braj darshan 512 by 512/nand gaon.png",
+      title: "श्री नंदगाँव धाम ",
     },
     {
-      image: "/Carousel/2.jpg",
-      title: "श्री विष्णु देव जी",
+      image: "/braj darshan 512 by 512/nidhi van.png",
+      title: "श्री निधिवन जी",
     },
     {
-      image: "/Carousel/3.jpg",
-      title: "स्वामी श्री हरिदास",
+      image: "/braj darshan 512 by 512/prem mandir.png",
+      title: "प्रेम मंदिर",
     },
     {
-      image: "/Carousel/4.jpg",
-      title: "श्री हित ध्रुवदास",
+      image: "/braj darshan 512 by 512/radha raman.png",
+      title: "श्री राधारमण लाल जी",
     },
     {
-      image: "/Carousel/5.jpg",
-      title: "महाप्रभु वल्लभाचार्य",
-    },
-    {
-      image: "/Carousel/6.jpg",
-      title: "श्री विठ्ठल देव",
-    },
-    {
-      image: "/Carousel/2.jpg",
-      title: "श्री विष्णु देव जी",
-    },
-  ];
+      image: "/braj darshan 512 by 512/vrindavan.png",
+      title: "श्रीधाम वृंदावन",
+},];
 
   return (
     <div className="container mx-auto">
       <MiniSliderAll
         santList={santData}
-        title="रसिक संत"
-        viewAllLink="/view-all-sants" 
+        title="श्री ब्रज धाम दर्शन "
+        viewAllLink="/braj-darshan" 
         seconds={1000}
       />
     </div>

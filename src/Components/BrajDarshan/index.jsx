@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const cardsData = [
-  { id: 1, templeName: "वृंदावन", imageUrl: "/vrindavan/brj5i.jpeg", link: "/braj-vrindavan" },
-  { id: 2, templeName: "मथुरा", imageUrl: "/vrindavan/brj1.jpeg", link: "/braj-mathura" },
-  { id: 3, templeName: "बरसाना", imageUrl: "/vrindavan/brj2.jpeg", link: "/braj-barsana" },
-  { id: 4, templeName: "गोवर्धन", imageUrl: "/vrindavan/brj3.jpeg", link: "/braj-govardhan" },
-  { id: 5, templeName: "गोकुल", imageUrl: "/vrindavan/brj4.jpeg", link: "/braj-gokul" },
-  { id: 6, templeName: "नंदगांव", imageUrl: "/vrindavan/brj5.jpeg", link: "/braj-nand" },
+  { id: 1, templeName: "वृंदावन", imageUrl: "/BannerPlace/vrindava.jpeg", link: "/braj-vrindavan" },
+  { id: 2, templeName: "मथुरा", imageUrl: "/BannerPlace/mathur.jpeg", link: "/braj-mathura" },
+  { id: 3, templeName: "बरसाना", imageUrl: "/BannerPlace/barsan.jpeg", link: "/braj-barsana" },
+  { id: 4, templeName: "गोवर्धन", imageUrl: "/BannerPlace/gowardha.jpeg", link: "/braj-govardhan" },
+  { id: 5, templeName: "गोकुल", imageUrl: "/BannerPlace/goku.jpeg", link: "/braj-gokul" },
+  { id: 6, templeName: "नंदगांव", imageUrl: "/BannerPlace/nandgao.jpeg", link: "/braj-nand" },
 ];
 
 const BrajDarshanAll = () => {

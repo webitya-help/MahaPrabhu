@@ -5,61 +5,53 @@ import MiniSliderAll from "../MiniSliderAll";
 const SantSlider = () => {
   const santData = [
     {
-      image: "/Carousel/1.jpg",
-      title: "श्री हित हरिवंश",
+      image: "/sant darshan 512 by 512/chacha vrindavan das ji.png",
+      title: "श्रीहित चाचा वृंदावनदास जी",
     },
     {
-      image: "/Carousel/2.jpg",
-      title: "श्री हरिराम व्यास",
+      image: "/sant darshan 512 by 512/dhruv das ji.png",
+      title: "श्रीहित ध्रुवदास जी महाराज",
     },
     {
-      image: "/Carousel/3.jpg",
-      title: "स्वामी श्री हरिदास",
+      image: "/sant darshan 512 by 512/hari ram vyas ji.png",
+      title: "श्री हरिराम व्यास जी",
     },
     {
-      image: "/Carousel/4.jpg",
-      title: "श्री हित ध्रुवदास",
+      image: "/sant darshan 512 by 512/harivansh ji mahaprabhu (2).png",
+      title: "गोo श्रीहित हरिवंश महाप्रभु जी",
     },
     {
-      image: "/Carousel/5.jpg",
-      title: "महाप्रभु वल्लभाचार्य",
+      image: "/sant darshan 512 by 512/harivansh ji mahaprabhu.png",
+      title: "गोo श्रीहित हरिवंश महाप्रभु जी",
     },
     {
-      image: "/Carousel/6.jpg",
-      title: "श्री विठ्ठल देव",
+      image: "/sant darshan 512 by 512/krishna das ji.png",
+      title: "श्री कृष्णदास जी",
     },
     {
-      image: "/Carousel/2.jpg",
-      title: "श्री विष्णु देव जी",
+      image: "/sant darshan 512 by 512/nagari das ji.png",
+      title: "श्री नेह नगरीदास जी",
     },
     {
-      image: "/Carousel/3.jpg",
-      title: "स्वामी श्री हरिदास",
+      image: "/sant darshan 512 by 512/roop lal ji.png",
+      title: "गोo श्रीहित रूपलाल जी",
     },
     {
-      image: "/Carousel/4.jpg",
-      title: "श्री हित ध्रुवदास",
+      image: "/sant darshan 512 by 512/sewak ji.png",
+      title: "श्रीहित सेवक जू महाराज",
     },
     {
-      image: "/Carousel/5.jpg",
-      title: "महाप्रभु वल्लभाचार्य",
-    },
-    {
-      image: "/Carousel/6.jpg",
-      title: "श्री विठ्ठल देव",
-    },
-    {
-      image: "/Carousel/2.jpg",
-      title: "श्री विष्णु देव जी",
-    },
-  ];
+      image: "/sant darshan 512 by 512/vithal vipul dev ji.png",
+      title: "श्री विट्ठल विपुल देव जी",
+},
+];
 
   return (
     <div className="container mx-auto">
       <MiniSliderAll
         santList={santData}
-        title="रसिक संत"
-        viewAllLink="/view-all-sants" seconds={1700}
+        title="श्री राधावल्लभ सम्प्रदाय संत दर्शन  "
+        viewAllLink="/sant-darshan" seconds={1700}
       />
     </div>
   );

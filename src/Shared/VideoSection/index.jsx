@@ -7,23 +7,23 @@ const VideoSection = () => {
     {
       url: "https://youtu.be/rgYrInORVu8?si=7-4WzUGAukge7PGH",
       title: "॥ शरद पूर्णिमा उत्सव ॥ श्री हित राधावल्लभ लाल ॥",
-      description: "शरद पूर्णिमा उत्सव श्री हित राधावल्लभ लाल ॥",
+      description: "",
     },
     {
       url: "https://youtu.be/OdSNTgOn9Dc?si=3qpeYj04AR3c-bD1",
       title: "व्याहुला दर्शन - श्री हित राधावल्लभ लाल वृंदावन धाम",
-      description: "व्याहुला दर्शन - श्री हित राधावल्लभ लाल वृंदावन धाम",
+      description: "",
     },
     {
       url: "https://youtu.be/z-fnd8OReuQ?si=lfdMXh1UUntRLcW4",
       title: "राधा प्यारी ने जन्म लिया है - राधाष्टमी विशेष उत्सव श्री राधावल्लभ लाल",
-      description: "राधा प्यारी ने जन्म लिया है - राधाष्टमी विशेष उत्सव श्री राधावल्लभ लाल",
+      description: "",
     },
   ];
 
   return (
     <section style={{ padding: "2rem 1rem", backgroundColor: "#f9f9f9" }}>
-      <h2
+      {/* <h2
         style={{
           fontSize: "24px",
           fontWeight: "600",
@@ -32,8 +32,8 @@ const VideoSection = () => {
           color: "#333",
         }}
       >
-        Video Section
-      </h2>
+       
+      </h2> */}
       <Row gutter={[16, 16]}>
         {videos.map((video, index) => (
           <Col xs={24} md={8} key={index}>

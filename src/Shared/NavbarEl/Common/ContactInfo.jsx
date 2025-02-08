@@ -3,18 +3,23 @@ import { PhoneOutlined, MailOutlined, EnvironmentOutlined } from '@ant-design/ic
 
 function ContactInfo() {
   return (
-    <div className="space-y-2 text-sm text-gray-600">
+    <div className="space-y-2 text-sm text-gray-600 py-5">
       <div className="flex items-center">
         <PhoneOutlined className="text-base mr-2" />
-        <span>+91 9693245941</span>
+        <span><b>सेवा संपर्क सूत्र </b>: 8168100515 , 9890455777
+        </span>
       </div>
       <div className="flex items-center">
         <MailOutlined className="text-base mr-2" />
-        <span>webitya@gmail.com</span>
+        <span>shrihitradhavallabh@gmail.com
+        </span>
       </div>
       <div className="flex items-center">
         <EnvironmentOutlined className="text-base mr-2" />
-        <span>Ganga nagar Harmu Ranchi, Ranchi Jharkhand</span>
+        <span>गोo श्रीहित निमिष जी महाराज <br></br>
+        श्रीहित राधावल्लभ लाल जी मंदिर, वृंदावन
+
+        </span>
       </div>
     </div>
   );

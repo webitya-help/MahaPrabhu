@@ -1,219 +1,173 @@
+import { WhatsAppOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-const santData = [
+const SantDarshanCmp = () => {
+  const [selectedSant, setSelectedSant] = useState(null);
+
+  const santData = [
     {
       id: 1,
-      title: "Goswami Shri Hit Harivansh Mahaprabhu ji",
-      description: "Goswami Hit Harivansh Mahaprabhu ji incarnation of Sri Priya Pritam ju’s flute who is Hit Sajni ju in Nikunj. Mahaprabhu ji spread Shri Priya pritam’s divine nectarian eternal pastimes Hit Prem Rasbhakti to rasiks. Mahaprabhu ji offer services to his beloved Shri Radhavallabh lal ji in Unchi Thor under dense grove now it is old Radhavallabh Temple or Shri Hit Harivansh Mahaprabhuji Temple.",
-      imageUrl: "/Sant Darshan/1.png"
+      title: "गोस्वामी हित हरिवंश महाप्रभु जी",
+      description: "गोस्वामी हित हरिवंश महाप्रभु जी श्री प्रिया प्रीतम जू के  बांसुरी के अवतार है, एवं निकुंज में प्रिय प्रीतम के रसमयी प्रेम से प्रकट श्रीहित सजनी सखी जू हैं। महाप्रभु जी ने श्री प्रिया प्रीतम की दिव्य अमृतमय शाश्वत लीला हित प्रेम रसभक्ति को रसिकों तक फैलाया। महाप्रभु जी अपने प्रिय श्री राधावल्लभ लाल जी को वृंदावन में पधारकर ऊंची ठोर के सघन में लता-पता से  श्रीजी के लिए निकुंज बना कर श्रीजी राधावल्लभ लाल जी के विग्रह को स्थापित किए  , अब यह पुराना राधावल्लभ मंदिर या श्री हित हरिवंश महाप्रभुजी मंदिर है।",
+      imageUrl: "/Sant Darshan/vanshi.jpeg"
     },
     {
       id: 2,
-      title: "Shri Hariram Vyas ji",
-      description: "Hariram Vyas (Samvat 1567 - 1689) was a high-ranking devotee and poet of the Radhavallabh sect. He is incarnation of Vishakha Sakhi. He is disciple of Shri Hit Harivansh Mahaprabhu ji. Shri Hariram vyas ji revealed Shri Jugal Kishore ji from well in Kishore Van, Vrindavan and today established in Panna city of Madhya Pradesh. He is composer of “Vyas vani”",
-      imageUrl: "/Sant Darshan/hariramvyasji.png"
+      title: "श्री हरिराम व्यास",
+      description: "हरिराम व्यास (संवत् 1567-1689) राधावल्लभ संप्रदाय के उच्च कोटि के भक्त एवं कवि थे। वे विशाखा सखी के अवतार हैं। वे श्री हित हरिवंश महाप्रभु जी के शिष्य हैं। श्री हरिराम व्यास जी ने श्री जुगल किशोर जी को किशोर वन, वृन्दावन के कुँए से प्रकट किया और आज मध्य प्रदेश के पन्ना शहर में स्थापित हैं। व्यास जी ने व्यास वाणी कि रचना की।”",
+      imageUrl: "/Sant Darshan/hariramvyasj.jpeg"
     },
     {
       id: 3,
-      title: "Shri Hit Sewak ji Maharaj",
-      description: "Damodardasji, who became known as “Sewak ji,” held a unique place in the practice of seva (selfless service). Shri Sewak ji maharaj compose Sewak Vani which is footfall of Shir Radhavallabh sec. His dedication to the service of his Guru and spiritual duties made him stand out among all the followers of the Hit lineage. The name of Shri Harivansh and his divine teachings were more dear to Sevak ji than his own life.",
-      imageUrl: "/Sant Darshan/sewak ji.png"
+      title: "श्री हित सेवक जी महाराज",
+      description: "दामोदरदासजी, जिन्हें सेवक जी के नाम से जाना जाता है, ने सेवा (निःस्वार्थ सेवा) के अभ्यास में एक अद्वितीय स्थान रखा। श्री सेवक जी महाराज ने सेवक वाणी की रचना की जो श्री राधावल्लभ धारा का चरणपाद है। अपने गुरु की सेवा और आध्यात्मिक कर्तव्यों के प्रति उनके समर्पण ने उन्हें हित  वंश के सभी अनुयायियों के बीच खड़ा कर दिया। सेवक जी को श्री हरिवंश का नाम और उनकी दिव्य शिक्षाएँ अपने प्राणों से भी अधिक प्रिय थीं।",
+      imageUrl: "/Sant Darshan/sewakj.jpeg"
     },
     {
       id: 4,
-      title: "Shri Hit Dhruva das ji Maharaj",
-      description: "Shri Hita Dhruvdas was the disciple of Shri Gopinath, the third son of Shri Hita Harivansh Mahaprabhu of Shri Radha Vallabh sect. His compositions are very famous in Shri Vrindavan Dham, and among the devotees who follow Vrindavana's Rasopasna. He compossed Bayalees Leela and Vrindavan Shat Leela.",
-      imageUrl: "/Sant Darshan/dhruvdasji.png"
+      title: "श्री हित ध्रुव दास जी महाराज",
+      description: "श्री हित ध्रुवदास श्री राधावल्लभ संप्रदाय के श्री हित हरिवंश महाप्रभु के तीसरे पुत्र श्री गोपीनाथ के शिष्य थे। उनकी रचनाएँ श्री वृन्दावन धाम और वृन्दावन की रसोपासना का पालन करने वाले भक्तों के बीच बहुत प्रसिद्ध हैं। उन्होंने बयालीस लीला और वृन्दावन शत लीला की रचना की।",
+      imageUrl: "/Sant Darshan/dhruvdasj.jpeg"
     },
     {
       id: 5,
-      title: "Shri Hit Neh Nagri Das ji",
-      description: "Shri Hit Neh Nagaridas ji born around 1590 in Berchha village Madhya Pradesh, in a rich Panwar Kshatriya family. Once Shri Hit Chaturbhuj das ji visited his village along with the saint congregation for satsang he got attracted towards nitya vihar upasna. He is disciple of Radhavallabh Acharya Goswami Vanchnadra ji. Nagaridas Ji gave a very delicious meal to sriji when she appeared with her sakhiya after playing pastime with lal ji  at midnight and continued to live this rule of Nishith-Bhog (kheer and puri). At that time, Radha Ji had said to build a temple in Barsana and celebrate the birth anniversary every year.",
+      title: "श्री हित नेह नागरी दास जी",
+      description: "श्री हित नेह नागरीदास जी का जन्म 1590 के आसपास मध्य प्रदेश के बेरछा गांव में एक धनी पंवार क्षत्रिय परिवार में हुआ था। एक बार श्री हित चतुर्भुज दास जी सत्संग के लिए संत मंडली के साथ अपने गाँव आये तो वे नित्य विहार उपासना की ओर आकर्षित हो गये। वे राधावल्लभ आचार्य गोस्वामी वंचनाद्र जी के शिष्य हैं। आधी रात को लाल जी के साथ लीला करने के बाद जब श्रीजी अपनी सखिया के साथ प्रकट हुईं तो नागरीदास जी ने उन्हें बहुत स्वादिष्ट भोजन दिया और निशीथ-भोग (खीर और पूरी) का यह नियम जारी रखा। उस समय राधा जी ने बरसाना में एक मंदिर बनाने और हर साल जन्मोत्सव मनाने की बात कही थी।",
       imageUrl: "/Sant Darshan/11.jpg"
     },
     {
       id: 6,
-      title: "Shri Hit Chacha Vrindavan Das ji",
-      description: "Shri Hit Vrindavan Das Ji was born in Brajdham, He was the most benevolent disciple of Radhavallabh sec. Acharya Hitavatansh Rasavanshiya Goswami Sri Harilal Vyas Ji's son, immersed in divine couple's nectar, Goswami Shri Hit Rooplal Ji. Chacha Vrindavan das ji compossed many padawali such as Karuna Beli , Yugal Sneh Patrika, Shri Radha roop Pratap beli, Shri Vrindavan Jas prakas beli, Aarat patrika beli , Bhakti prarthna beli , Vivek Lakshan Beli.",
-      imageUrl: "/Sant Darshan/chachavrindavandasji.png"
+      title: "श्री हित चाचा वृन्दावन दास जी",
+      description: "श्री हित वृन्दावन दास जी का जन्म ब्रजधाम में हुआ था, वे राधावल्लभ संप्रदाय के परम परोपकारी शिष्य थे। दिव्य युगल रस में डूबे आचार्य हितवतंश रसवंशीय गोस्वामी श्री हरिलाल व्यास जी के सुपुत्र गोस्वामी श्री हित रूपलाल जी। चाचा वृन्दावन दास जी ने करुणा बेली, युगल स्नेह पत्रिका, श्री राधा रूप प्रताप बेली, श्री वृन्दावन जस प्रकाश बेली, आरत पत्रिका बेली, भक्ति प्रार्थना बेली, विवेक लक्षण बेली जैसी कई पदावली की रचना की।",
+      imageUrl: "/Sant Darshan/chachavrindavandasj.jpeg"
     },
     {
       id: 7,
-      title: "Goswami Shri Hit Kamal Nayan ji Maharaj",
-      description: "Goswami Shri Hit Kamalnayan Ji was a great poet of Shri Radhavallabh sect. He was born in the lineage of Shri Hita Harivansh Mahaprabhu ji in Vrindavan. Samay Prabandha, Asthyam, Utsav Padawali Varshotsav the verses of Basant Holi, Pjooldol, Chandan Rachna Phool Rachna, Jhulan etc have been found.",
-      imageUrl: "/Sant Darshan/harivansh ji mahaprabhu.png"
+      title: "गोस्वामी श्री हित कमल नयन जी महाराज",
+      description: "गोस्वामी श्री हित कमलनयन जी श्री राधावल्लभ संप्रदाय के महान कवि थे। उनका जन्म श्री हित हरिवंश महाप्रभु जी के वंश में वृन्दावन में हुआ था। समय प्रबंध, अष्टयाम, उत्सव पदावली वर्षोत्सव बसंत होली, पजूलडोल, चंदन रचना फूल रचना, झूलन आदि के पद मिले हैं।",
+      imageUrl: "/Sant Darshan/harivanshjimahaprabh.jpeg"
     },
     {
       id: 8,
-      title: "Goswami Shri Hit Krishn Chandra Ji",
-      description: "Goswami Shri Hita Krishn Chandra ji, a Rasik saint of Vrindavan and 2nd son of Great Rasik Shiromani Shri Hita Harivansh Mahaprabhu. He composed Shri Radha Upsudha Nidhi. Early days he reside in Deoband and offering service to Shri Navrangi Lal ji who revealed by Shri Hit Harivansh Mahprabhu ji from well in their courtyard.",
-      imageUrl: "/Sant Darshan/krishna das ji.png"
+      title: "गोस्वामी श्री हित कृष्ण चन्द्र जी",
+      description: "गोस्वामी श्री हित कृष्ण चंद्र जी, वृन्दावन के रसिक संत और महान रसिक शिरोमणि श्री हित हरिवंश महाप्रभु के दूसरे पुत्र। उन्होंने श्री राधा उपसुधा निधि की रचना की। शुरुआती दिनों में वह देवबंद में रहते थे और श्री नवरंगी लाल जी की सेवा करते थे, जिन्हें श्री हित हरिवंश महप्रभु जी ने उनके आंगन में कुएं से प्रकट किया था।",
+      imageUrl: "/Sant Darshan/krishnadasj.jpeg"
     },
     {
       id: 9,
-      title: "Goswami Shri Hit Vanchandra Ji Maharaj",
-      description: "Goswami Hit Vanchandra Goswami Ji maharaj was the eldest son of Shri Hit Harivansh Mahaprabhu. He was born on the 6th day of the dark fortnight in the month of Chaitra (April) in 1528 in Deoband. He was built first red stone temple in Vrindavan for Shri Radhavallabh lal ji in 1584.",
-      imageUrl: "/Sant Darshan/vanchandra.png"
+      title: "गोस्वामी श्री हित वनचन्द्र जी महाराज",
+      description: "गोस्वामी हित वनचन्द्र गोस्वामी जी महाराज श्री हित हरिवंश महाप्रभु के ज्येष्ठ पुत्र थे। उनका जन्म चैत्र (अप्रैल) महीने के कृष्ण पक्ष की षष्ठी तिथि को 1528 में देवबंद में हुआ था। उन्होंने 1584 में श्री राधावल्लभ लाल जी के लिए वृन्दावन में पहला लाल पत्थर का मंदिर बनवाया था।",
+      imageUrl: "/Sant Darshan/vanchandr.jpeg"
     },
     {
       id: 10,
-      title: "Goswami Shri Hit Chandralal ji",
-      description: "Goswami Shri Hit Chandralal ji was contemporary of Shri Hit Chacha Vrindavan Das ji , a Rasik of Shri Radha Vallabh Sec. He was in the lineage of Shri Kishori ji who is daughter of Goswami Shri Hit Vanchandra ji. He composed Bhavana Pacchisi, Vrindavan Prakash Mala, Abhilash Battisi etc.",
-      imageUrl: "/Sant Darshan/vithal vipul dev ji.png"
-    }
-  ];
-  
+      title: "गोस्वामी श्री हित चन्द्रलाल जी",
+      description: "गोस्वामी श्री हित चंद्रलाल जी श्री राधा वल्लभ संप्रदाय के रसिक श्री हित चाचा वृन्दावन दास जी के समकालीन थे। वह श्री किशोरी जी के वंश में थे जो गोस्वामी श्री हित वनचंद्र जी की पुत्री हैं। उन्होंने भावना पच्चीसी, वृन्दावन प्रकाश माला, अभिलाष बत्तीसी आदि की रचना की।",
+      imageUrl: "/Sant Darshan/vithalvipuldevj.jpeg"
+}
+];
 
-const SantDarshanCmp = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [visibleItems, setVisibleItems] = useState(4); // Initial visible items for mobile
-  const itemsPerPage = 4; // Number of items per page for desktop and "Load More"
-
-  const handleImageClick = (imageUrl) => {
-    setSelectedImage(imageUrl);
+  const handleCardClick = (sant) => {
+    setSelectedSant(sant);
   };
 
   const handleCloseModal = () => {
-    setSelectedImage(null);
+    setSelectedSant(null);
   };
-
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
-  const handleLoadMore = () => {
-    setVisibleItems((prev) => prev + itemsPerPage);
-  };
-
-  const totalPages = Math.ceil(santData.length / itemsPerPage);
-  const paginatedData = santData.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
-
-  const visibleData = santData.slice(0, visibleItems); // Data for "Load More" on mobile
 
   return (
     <div className="p-4 my-14" style={{ userSelect: "none" }}>
-      {/* Responsive Grid */}
       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-        {window.innerWidth <= 768
-          ? visibleData.map((sant) => (
-              <div
-                key={sant.id}
-                className="flex flex-col sm:flex-row border rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
-              >
-                {/* Image Section */}
-                <div
-                  className="relative flex-shrink-0 p-2"
-                  onClick={() => handleImageClick(sant.imageUrl)}
-                >
-                  <img
-                    src={sant.imageUrl}
-                    alt={sant.title}
-                    className="w-full sm:w-48 sm:h-48 object-cover rounded-md"
-                    loading="lazy"
-                  />
-                  {/* Glossy Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black opacity-25 hover:opacity-0 transition-opacity duration-300"></div>
-                </div>
+        {santData.map((sant) => (
+          <div
+            key={sant.id}
+            className="flex flex-col sm:flex-row border rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+            onClick={() => handleCardClick(sant)}
+          >
+            <div className="relative flex-shrink-0 p-2">
+              <img
+                src={sant.imageUrl}
+                alt={sant.title}
+                className="w-full sm:w-48 sm:h-48 object-cover rounded-md"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black opacity-25 hover:opacity-0 transition-opacity duration-300"></div>
+            </div>
 
-                {/* Content Section */}
-                <div className="p-4 w-full">
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 hover:text-blue-600 transition-colors duration-300">
-                    {sant.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-gray-600 mt-2">{sant.description}</p>
-                </div>
-              </div>
-            ))
-          : paginatedData.map((sant) => (
-              <div
-                key={sant.id}
-                className="flex flex-col sm:flex-row border rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+            <div className="p-4 w-full">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 hover:text-blue-600 transition-colors duration-300">
+                {sant.title}
+              </h3>
+              <p
+                className="text-sm sm:text-base text-gray-600 mt-2 line-clamp-4"
+                style={{
+                  display: "-webkit-box",
+                  WebkitLineClamp: 4,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
               >
-                {/* Image Section */}
-                <div
-                  className="relative flex-shrink-0 p-2"
-                  onClick={() => handleImageClick(sant.imageUrl)}
-                >
-                  <img
-                    src={sant.imageUrl}
-                    alt={sant.title}
-                    className="w-full sm:w-48 sm:h-48 object-cover rounded-md"
-                    loading="lazy"
-                  />
-                  {/* Glossy Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black opacity-25 hover:opacity-0 transition-opacity duration-300"></div>
-                </div>
-
-                {/* Content Section */}
-                <div className="p-4 w-full">
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 hover:text-blue-600 transition-colors duration-300">
-                    {sant.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-gray-600 mt-2">{sant.description}</p>
-                </div>
-              </div>
-            ))}
+                {sant.description}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* Pagination for Desktop */}
-      {window.innerWidth > 768 && (
-        <div className="flex justify-center mt-6">
-          {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
-            <button
-              key={page}
-              onClick={() => handlePageChange(page)}
-              className={`mx-1 px-4 py-2 border rounded-md ${
-                currentPage === page
-                  ? "bg-blue-500 text-white"
-                  : "bg-white text-blue-500 border-blue-500"
-              } transition-colors duration-300`}
-            >
-              {page}
-            </button>
-          ))}
-        </div>
-      )}
+      {/* Modal for full details */}
+      {selectedSant && (
+  <div
+    className="fixed inset-0 z-50 bg-black bg-opacity-75 flex items-center justify-center p-4"
+    onClick={handleCloseModal}
+  >
+    <div
+      className="relative bg-white p-8 rounded-lg shadow-2xl max-w-3xl w-full transition-transform transform scale-100 hover:scale-105"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* Close Button */}
+      <button
+        className="absolute top-4 right-4 text-gray-800 text-2xl font-bold hover:text-red-600 focus:outline-none transition-colors"
+        onClick={handleCloseModal}
+      >
+        &times;
+      </button>
 
-      {/* Load More Button for Mobile */}
-      {window.innerWidth <= 768 && visibleItems < santData.length && (
-        <div className="flex justify-center mt-6">
-          <button
-            onClick={handleLoadMore}
-            className="px-6 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300"
-          >
-            Load More
-          </button>
-        </div>
-      )}
+      {/* Title */}
+      <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
+        {selectedSant.title}
+      </h2>
 
-      {/* Modal for displaying selected image */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 z-50 bg-black bg-opacity-75 flex items-center justify-center"
+      {/* Description */}
+      <p className="text-gray-700 leading-relaxed text-lg text-justify mb-6">
+        {selectedSant.description}
+      </p>
+
+      {/* Optional Action Buttons */}
+      <div className="flex justify-end gap-4">
+        <button
+          className="bg-gray-200 text-gray-800 px-4 py-2 rounded-md shadow hover:bg-gray-300 focus:ring-2 focus:ring-gray-400 transition"
           onClick={handleCloseModal}
         >
-          <div className="relative bg-white p-6 rounded-lg shadow-lg max-w-3xl w-full">
-            <button
-              className="absolute top-2 right-2 text-black text-3xl font-bold"
-              onClick={handleCloseModal}
-              style={{ outline: "none" }}
-            >
-              &times;
-            </button>
-            <img
-              src={selectedImage}
-              alt="Full-screen view"
-              className="object-contain mx-auto rounded-md shadow-lg"
-              style={{ maxHeight: "75vh", maxWidth: "100%" }}
-              loading="lazy"
-            />
-          </div>
-        </div>
-      )}
+          Close
+        </button>
+
+        {/* Take Action Button with WhatsApp Icon */}
+        <Link
+          to="https://wa.link/7oxwsq" target="_blank" // Update this to your desired route
+          className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-md shadow hover:bg-green-700 focus:ring-2 focus:ring-green-500 transition"
+        >
+          <WhatsAppOutlined className="text-xl" /> {/* WhatsApp Icon */}
+          मंदिर से जुड़े
+
+        </Link>
+      </div>
+    </div>
+  </div>
+)}
+
+
     </div>
   );
 };

@@ -6,13 +6,14 @@ const SampradayHeroBanner = () => {
       style={{
         position: 'relative',
         width: '100%',
-        height: '40vh',
-        backgroundImage: 'url("/Carousel/1.jpg")', // Image in the public folder
+        height: '60vh',
+        backgroundImage: 'url("/bgab.jpg")', // Image in the public folder
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: '0px 0px',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundRepeat:"no-repeat",
         textAlign: 'center',
         color: '#fff',
         marginTop: '70px',
