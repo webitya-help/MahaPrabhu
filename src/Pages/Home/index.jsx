@@ -1,4 +1,5 @@
 import HomeAbRadhavallabh from "../../Components/HomePage/HomeAbRadhavallabh";
+import SevaComponent from "../../Components/HomePage/HomeMainComponent";
 import HomePageAboutUs from "../../Components/HomePage/HomepageAbout";
 import HomePageHero from "../../Components/HomePage/HomePageHero";
 import HomeTimingSection from "../../Components/HomePage/HomeTiming";
@@ -19,12 +20,13 @@ const Home = () => {
             <LayoutEl>
                 <HomePageHero />
                 <CustomCarousel />
-                <BrajSlider/>
+                <UtsavSlider/>
                 <HomeTimingSection/>
+                <SevaComponent/>
                 <HomePageAboutUs/>
                 <HomeAbRadhavallabh/>
-                <UtsavSlider/>
                 
+                <BrajSlider/>
                 <VaniSlider/>
                 <SantSlider/>
                 <VideoSection/>

@@ -2,7 +2,7 @@
 import React from 'react';
 
 const cardsData = [
-    { id: 1, title: "यमुनाष्टक ", imageUrl: "/HitSahityaCoverImg/1.jpg", pdfUrl: "/HitSahityPdf/Yamunashtak.pdf" },
+    { id: 1, title: "यमुनाष्टक", imageUrl: "/HitSahityaCoverImg/1.jpg", pdfUrl: "/HitSahityPdf/Yamunashtak.pdf" },
     { id: 2, title: "श्रीहित चौरासी जी ", imageUrl: "/HitSahityaCoverImg/2.jpg", pdfUrl: "/HitSahityPdf/Hit Chaurasi ji.pdf" },
     { id: 3, title: "स्टफ वाणी ", imageUrl: "/HitSahityaCoverImg/3.jpg", pdfUrl: "/HitSahityPdf/Sfut Vani.pdf" },
     { id: 4, title: "वृंदावन धाम को मंडल", imageUrl: "/HitSahityaCoverImg/4.jpg", pdfUrl: "/HitSahityPdf/Vrindavan dham ko mandal.pdf" },

@@ -2,11 +2,10 @@ import React from 'react';
 
 const SampradayHeroBanner = () => {
   return (
-    <section
+    <section className='md:h-[60vh]  h-[35vh] '
       style={{
         position: 'relative',
         width: '100%',
-        height: '60vh',
         backgroundImage: 'url("/bgab.jpg")', // Image in the public folder
         backgroundSize: 'cover',
         backgroundPosition: '0px 0px',
