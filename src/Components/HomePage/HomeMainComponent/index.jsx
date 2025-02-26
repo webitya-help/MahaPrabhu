@@ -1,65 +1,85 @@
-import React from "react";
-import { Layout, Menu, Dropdown, Card, Typography, Row, Col } from "antd";
-import {
-  DownOutlined,
-  BellOutlined,
-  HomeOutlined,
-  ShopOutlined,
-  CalendarOutlined,
-} from "@ant-design/icons";
-import "antd/dist/reset.css";
+import React, { useState } from "react";
 
-const { Header, Content } = Layout;
-const { Title, Text } = Typography;
+const DarshanBooking = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-const sevaMenu = (
-  <Menu>
-    <Menu.Item key="1">E-Seva</Menu.Item>
-    <Menu.Item key="2">Vastra Seva</Menu.Item>
-    <Menu.Item key="3">Darshan Booking</Menu.Item>
-    <Menu.Item key="4">Cottage Booking</Menu.Item>
-  </Menu>
-);
-
-const Dashboard = () => {
   return (
-    <Layout>
-      <Header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", background: "#fff" }}>
-        <Dropdown overlay={sevaMenu}>
-          <a onClick={(e) => e.preventDefault()} style={{ fontSize: 16 }}>
-            Select Seva <DownOutlined />
-          </a>
-        </Dropdown>
-        <Title level={4} style={{ color: "red", margin: 0 }}>
-          श्री गोस्वामी... जन्मदिन 14-02-2025
-        </Title>
-        <BellOutlined style={{ fontSize: 20 }} />
-      </Header>
-      <Content style={{ padding: "20px" }}>
-        <Row gutter={[16, 16]}>
-          <Col span={8}>
-            <Card title={<><CalendarOutlined /> Daily Darshan Time</>}>
-              <Text>Magla: 5:45 AM - 6:30 AM</Text><br />
-              <Text>Shringar: 7:15 AM - 7:45 AM</Text><br />
-              <Text>Rajbhog: 11:15 AM - 12:15 PM</Text><br />
-              <Text>Bhog-Arti: 4:30 PM - 5:55 PM</Text><br />
-            </Card>
-          </Col>
-          <Col span={16}>
-            <Card title={<><ShopOutlined /> Tippani</>}>
-              <Text>16 Feb 25 (Sunday) Choth, Krishna Paksh Phalgun</Text><br />
-              <Text>17 Feb 25 (Monday) Pancham...</Text><br />
-              <Text>18 Feb 25 (Tuesday) Chhath...</Text><br />
-              <Text>20 Feb 25 (Thursday) Satam...</Text><br />
-            </Card>
-            <Card title={<><HomeOutlined /> Shringar Pranalika</>} style={{ marginTop: 16 }}>
-              <Text strong>श्रृंगार - फाल्गुन कृष्ण पक्ष चतुर्थी</Text>
-            </Card>
-          </Col>
-        </Row>
-      </Content>
-    </Layout>
+    <div className="p-4 bg-gray-100">
+      {/* Header Buttons */}
+      <div className="flex flex-wrap justify-center space-x-2 sm:space-x-4 mb-4">
+        <div 
+          className="relative"
+          onMouseEnter={() => setIsDropdownOpen(true)}
+          onMouseLeave={() => setIsDropdownOpen(false)}
+        >
+          <button
+            className="bg-blue-500 text-white px-4 py-2 sm:px-6 rounded flex items-center cursor-pointer"
+          >
+            E-Seva
+            <span className="ml-2">{isDropdownOpen ? "▲" : "▼"}</span>
+          </button>
+          {isDropdownOpen && (
+            <div className="absolute w-48 sm:w-64 bg-white shadow-lg rounded mt-2 z-10">
+              <button className="block w-full text-left px-4 py-2 bg-pink-200 border-b">Shriji Seva</button>
+              <button className="block w-full text-left px-4 py-2 bg-green-200 border-b text-red-600">Gaumataji Seva Bhent</button>
+              <button className="block w-full text-left px-4 py-2 bg-yellow-200 border-b text-red-600">Shriji Samagri Seva Bhent</button>
+              <button className="block w-full text-left px-4 py-2 bg-orange-200">e-Manorath Seva</button>
+            </div>
+          )}
+        </div>
+        <button className="bg-pink-500 text-white px-4 py-2 sm:px-6 rounded cursor-pointer">Vastra Seva</button>
+        <button className="bg-yellow-500 text-white px-4 py-2 sm:px-6 rounded cursor-pointer">Darshan Booking</button>
+        <button className="bg-gray-500 text-white px-4 py-2 sm:px-6 rounded cursor-pointer">Cottage Booking</button>
+      </div>
+      {/* Latest News & Tenders */}
+      <div className="bg-red-600 text-white p-3 flex flex-col sm:flex-row justify-between mb-4">
+        <span>Latest News: होली, होलिका प्रदीपन 15 …</span>
+        <span>Latest Tenders <span className="text-yellow-300">New!</span></span>
+      </div>
+      {/* Main Content */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+        {/* Darshan Time */}
+        <div className="bg-white p-4 sm:p-6 rounded shadow-md">
+          <h2 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4">🛕 Daily Darshan Time</h2>
+          <ul className="text-sm space-y-2">
+            <li>🔹 Mangla: 05:45am - 06:30am</li>
+            <li>🔹 Shringar: 07:15am - 07:45am</li>
+            <li>🔹 Gwal: 09:00am - 09:15am</li>
+            <li>🔹 Rajbhog: 11:15am - 12:15pm</li>
+            <li>🔹 Uthapan: 03:45pm - 04:00pm</li>
+            <li>🔹 Bhog-Arti: 05:30pm - 05:55pm</li>
+            <li>🔹 Shayan: 07:00pm - 07:40pm</li>
+          </ul>
+        </div>
+        {/* Tipani & Shringar Pranalika */}
+        <div className="bg-white p-4 sm:p-6 rounded shadow-md border border-gray-300 grid grid-cols-1 sm:grid-cols-2 divide-x divide-gray-300">
+          {/* Left Side */}
+          <div className="flex flex-col items-center p-4 bg-gray-100 rounded-l w-full">
+            <div className="flex flex-col items-center mb-2 sm:mb-4">
+              <h2 className="text-md font-bold">🌸 Tipani</h2>
+              <div className="p-3 overflow-y-scroll h-32 sm:h-40 cursor-pointer">
+                <p className="text-sm font-bold text-red-700">26 Feb, 25 (Wednesday) Teras , Krushna Paksh Phalgun</p>
+                <p className="text-sm">27 Feb, 25 (Thursday) Chaudash , Krushna Paksh Phalgun</p>
+                <p className="text-sm">28 Feb, 25 (Friday) Ekam , Shukla Paksh Phalgun</p>
+                <p className="text-sm">01 Mar, 25 (Saturday) Duj , Shukla Paksh Phalgun</p>
+                <p className="text-sm">02 Mar, 25 (Sunday) Tij , Shukla Paksh Phalgun</p>
+              </div>
+            </div>
+          </div>
+          {/* Right Side */}
+          <div className="flex flex-col justify-between p-4 w-full">
+            <div className="mb-2 sm:mb-4 text-center">
+              <h2 className="text-md font-bold">🖌 Shringar Pranalika</h2>
+              <p className="text-sm mt-2">26-02-2025</p>
+            </div>
+            <div>
+              <p className="text-sm italic text-gray-600 text-center">ShringarPranalika not available.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default Dashboard;
+export default DarshanBooking;
