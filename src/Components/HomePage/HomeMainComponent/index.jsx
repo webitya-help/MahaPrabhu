@@ -1,7 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const DarshanBooking = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const timeoutRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current); // Prevent instant hiding
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 200); // Delay hiding by 200ms
+  };
 
   return (
     <div className="p-4 bg-gray-100">
@@ -9,12 +21,10 @@ const DarshanBooking = () => {
       <div className="flex flex-wrap justify-center space-x-2 sm:space-x-4 mb-4">
         <div 
           className="relative"
-          onMouseEnter={() => setIsDropdownOpen(true)}
-          onMouseLeave={() => setIsDropdownOpen(false)}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          <button
-            className="bg-blue-500 text-white px-4 py-2 sm:px-6 rounded flex items-center cursor-pointer"
-          >
+          <button className="bg-blue-500 text-white px-4 py-2 sm:px-6 rounded flex items-center cursor-pointer">
             E-Seva
             <span className="ml-2">{isDropdownOpen ? "▲" : "▼"}</span>
           </button>
@@ -31,11 +41,13 @@ const DarshanBooking = () => {
         <button className="bg-yellow-500 text-white px-4 py-2 sm:px-6 rounded cursor-pointer">Darshan Booking</button>
         <button className="bg-gray-500 text-white px-4 py-2 sm:px-6 rounded cursor-pointer">Cottage Booking</button>
       </div>
+      
       {/* Latest News & Tenders */}
       <div className="bg-red-600 text-white p-3 flex flex-col sm:flex-row justify-between mb-4">
         <span>Latest News: होली, होलिका प्रदीपन 15 …</span>
         <span>Latest Tenders <span className="text-yellow-300">New!</span></span>
       </div>
+
       {/* Main Content */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
         {/* Darshan Time */}
@@ -51,6 +63,7 @@ const DarshanBooking = () => {
             <li>🔹 Shayan: 07:00pm - 07:40pm</li>
           </ul>
         </div>
+
         {/* Tipani & Shringar Pranalika */}
         <div className="bg-white p-4 sm:p-6 rounded shadow-md border border-gray-300 grid grid-cols-1 sm:grid-cols-2 divide-x divide-gray-300">
           {/* Left Side */}
@@ -66,13 +79,14 @@ const DarshanBooking = () => {
               </div>
             </div>
           </div>
+
           {/* Right Side */}
           <div className="flex flex-col justify-between p-4 w-full">
             <div className="mb-2 sm:mb-4 text-center">
               <h2 className="text-md font-bold">🖌 Shringar Pranalika</h2>
               <p className="text-sm mt-2">26-02-2025</p>
             </div>
-            <div>
+            <div className="flex justify-center items-center w-auto">
               <p className="text-sm italic text-gray-600 text-center">ShringarPranalika not available.</p>
             </div>
           </div>
@@ -83,3 +97,5 @@ const DarshanBooking = () => {
 };
 
 export default DarshanBooking;
+
+
