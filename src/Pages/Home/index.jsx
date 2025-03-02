@@ -25,7 +25,6 @@ const Home = () => {
                 <SevaComponent/>
                 <HomePageAboutUs/>
                 <HomeAbRadhavallabh/>
-                
                 <BrajSlider/>
                 <VaniSlider/>
                 <SantSlider/>
