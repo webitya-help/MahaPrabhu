@@ -12,6 +12,8 @@ import BrajGovardhan from "./Elements/BrajPlaces/Govardhan";
 import BrajGokul from "./Elements/BrajPlaces/Gokul";
 import BrajNandGaon from "./Elements/BrajPlaces/NandGaon";
 import ComingSoon from "./Shared/ComingSoon";
+import MehendiPad2 from "./Components/UtsavKePadEl/MehendiPad2";
+import Rakhiutsav from "./Components/UtsavKePadEl/Rakhiutsav1";
 
 const App = () => {
   return (
@@ -33,6 +35,9 @@ const App = () => {
           <Route path="/braj-nand" element={<BrajNandGaon />} />
           {/*  */}
           <Route path="/*" element={<ComingSoon />} />
+          {/* ====Utsav Pad */}
+          <Route path="/mehendipad" element={<MehendiPad2/>} />
+          <Route path="/rakhiutsav" element={<Rakhiutsav/>} />
         </Routes>
       </BrowserRouter>
     </>
