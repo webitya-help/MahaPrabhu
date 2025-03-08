@@ -1,15 +1,66 @@
-import LayoutEl from "../../../Shared/LayoutEl"
-
-
+import React from 'react';
+import LayoutEl from "../../../Shared/LayoutEl";
 
 const Mangal_gaan = () => {  
     return (
-        <>
-       <LayoutEl>
-        <h1>Aditya</h1>
-       </LayoutEl>
-        </>
-    )
-
+        <LayoutEl>
+            <div className="container mx-auto p-4">
+                <h1 className="text-3xl md:text-4xl font-bold text-center text-purple-700 mb-6">
+                    श्रीहित मंगल गान
+                </h1>
+                <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h1 className="text-2xl font-bold text-center text-purple-700 mb-4">
+                        श्रीहित मंगल गान
+                    </h1>
+                    <p className="text-lg leading-loose text-gray-800 whitespace-pre-line text-center">
+                        जै जै श्रीहरिवंश, व्यास-कुल-मंडना |
+                        <br />
+                        रसिकअन्यनि मुख्य गुरू, जन भय खंडना ||
+                        <br />
+                        श्रीवृन्दावन वास, रास रस भूमि जहां |
+                        <br />
+                        क्रीडत श्यामा-श्याम, पुलिन मँजुल तहां ||
+                        <br />
+                        पुलिन मंजुल परम पावन, त्रिविध तहां मारुत बहे |
+                        <br />
+                        कुंज भवन विचित्र शोभा, मदन नित सेवत रहै ||
+                        <br />
+                        तहां संतत व्यासनंदन, रहत कलुष विहंडना |
+                        <br />
+                        जै जै श्रीहरिवंश, व्यास-कुल-मंडना ||१||
+                        <br />
+                        जै जै श्रीहरिवंश-चन्द्र उदित सदा |
+                        <br />
+                        द्विज-कुल-कुमुद प्रकाश, विपुल सुख संपदा ||
+                        <br />
+                        पर उपकार विचार, सुमति जग विस्तरी |
+                        <br />
+                        करुणा-सिंधु कृपालु, काल भय सब हरि ||
+                        <br />
+                        हरि सब कलि काल की भय, कृपा रूप जु वपु धर्यौ |
+                        <br />
+                        करत जे अनसहन निन्दक, तिनहुँ पै अनुग्रह करयौ ||
+                        <br />
+                        निरभिमान निर्वेर निरुपम, निष्कलंक जु सर्वदा |
+                        <br />
+                        जै जै श्रीहरिवंश-चन्द्र उदित सदा ||२||
+                        <br />
+                        जै जै श्रीहरिवंश, प्रसंशित सब दुनी |
+                        <br />
+                        सारासार विवेकित, कोविद बहु गुनि ||
+                        <br />
+                        गुप्त रीति आचरन, प्रगट सब जग दिये |
+                        <br />
+                        ज्ञान-धर्म-व्रत-कर्म, भक्ति-किंकर कीये ||
+                        <br />
+                        भक्ति हित जे शरण आये, द्वंद दोष जु सब घटे |
+                        <br />
+                        कमल कर जिन अभय दीने, कर्म-बंधन सब कटे ||
+                    </p>
+                </div>
+            </div>
+        </LayoutEl>
+    );
 }
-export default Mangal_gaan
+
+export default Mangal_gaan;

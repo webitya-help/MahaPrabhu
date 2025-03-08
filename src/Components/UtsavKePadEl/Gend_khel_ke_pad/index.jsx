@@ -1,15 +1,61 @@
-import LayoutEl from "../../../Shared/LayoutEl"
+import LayoutEl from "../../../Shared/LayoutEl";
 
+const Gend_khel_ke_pad = () => {
+  return (
+    <LayoutEl>
+      <div className="container mx-auto p-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-center text-purple-700 mb-6">
+          गेंद खेल के पद
+        </h1>
+        <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <h1 className="text-2xl font-bold text-center text-purple-700 mb-4">
+            गेंद खेल के पद
+          </h1>
+          <p className="text-lg leading-loose text-gray-800 whitespace-pre-line text-center">
+            मानहुँ केलिन खेल मच्यौ सुख मेलन झेलन के सब पावैं ॥
+            <br />
+            लाल निहाल-निहाल कहैं पुलकैं ललकैं सरसें सरसावैं।
+            <br />
+            श्रीहरिवंश कृपा बल गेंदन खेल अनन्य अली दरसावैं॥५॥
+            <br />
+            गेंदन खेलन भाँति अनेकन खेलत वार न पार न पावैं।
+            <br />
+            फूलन सौं नवलासिन सों बल खेलन खेल भये उपजावैं॥
+            <br />
+            खेलहु खेल गये सब देखत आनन्द आनन्द के न समावैं।
+            <br />
+            अली दरसावैं॥६॥
+            <br />
+            छूटि गये पट के लटके बँद भूषन टूटि गये लटकावैं।
+            <br />
+            हैं समतूल समात न फूल सखी इतकी उतकी हरसावैं॥
+            <br />
+            स्वेद कना तन ऊपर सोहत मोहत मोहन नहिं पल लावैं।
+            <br />
+            श्रीहरिवंश कृपा बल तें बन रूप अनन्य अली दरसावैं ॥७॥
+            <br />
+            कंचन नील मणी द्रम बेलि खचे कल मोतिन से झलकावैं।
+            <br />
+            कै छबि रूपन कुंजन ऊपर ओस कना नवला चिलका ॥
+            <br />
+            भीर भई छबि कौन कहै सखि रूपहुँ देखन कौं तरसावें।
+            <br />
+            श्रीहरिवंश कृपा बल तें बन रूप अनन्य अली दरसावैं ॥८॥
+            <br />
+            भामिनि कौ श्रम जानि लला अपु मानत हार जु सीस नबावैं।
+            <br />
+            फूलन कौ बिजनौ कर लै पिय मंदहि मंद करैं सरसावैं ॥
+            <br />
+            प्रेम सरोवर ओर चले जल क्रीड़न कौं सबही तरसावैं।
+            <br />
+            श्रीहरिवंश कृपा बल तें बन रूप अनन्य अली दरसावै ॥ ९ ॥५१॥
+            <br />
+            श्रीकृष्णदासजी कृत-राग विभास-
+          </p>
+        </div>
+      </div>
+    </LayoutEl>
+  );
+};
 
-
-const Gend_khel_ke_pad = () => {  
-    return (
-        <>
-       <LayoutEl>
-        <h1>Aditya</h1>
-       </LayoutEl>
-        </>
-    )
-
-}
-export default Gend_khel_ke_pad
+export default Gend_khel_ke_pad;
